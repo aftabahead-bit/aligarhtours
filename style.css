@@ -386,6 +386,16 @@ body::before {
 .hero h1 { max-width: 720px; color: #fff; font-size: clamp(56px, 8vw, 104px); }
 .hero h1 em, h1 em, h2 em { color: #a78bfa; }
 .hero-text { color: #b7c3d6; }
+.hero-thought {
+  max-width: 570px;
+  margin: 0 0 20px;
+  padding-left: 16px;
+  border-left: 2px solid #a78bfa;
+  color: #e4e9f3;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.35;
+}
 .glass-chip { border-color: rgba(255,255,255,.15); background: rgba(18,24,38,.7); color: #b9c5d6; }
 .eyebrow { color: #91a0b6; }
 .text-link { color: #c4cfdf; }
@@ -408,6 +418,10 @@ form label { color: #a3b0c3; }
 form input, form select { color: #f5f7fb; }
 form input::placeholder { color: #74839a; }
 .footer strong { color: #f5f7fb; }
+.footer-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.footer-contact strong { color: #a78bfa; font-size: 15px; }
+.footer-contact a { color: #b8c5d8; font-size: 11px; }
+.footer-contact a:hover { color: #38bdf8; }
 .proof-strip {
   display: grid;
   grid-template-columns: repeat(3, .65fr) 1.4fr;
@@ -433,6 +447,7 @@ form input::placeholder { color: #74839a; }
   .proof-quote { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.1); border-left: 0; }
   .floating-whatsapp { right: 12px; bottom: 12px; }
   .floating-whatsapp span { display: none; }
+  .footer-contact { align-items: flex-start; }
 }
 @media (max-width: 800px) {
   .desktop-nav { display: none; }
