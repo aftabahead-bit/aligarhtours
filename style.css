@@ -344,6 +344,96 @@ form .button { grid-column: 1 / -1; margin-top: 8px; }
 @media (prefers-reduced-motion: reduce) {
   .media-tab, .media-view-button, .media-thumbnail, .media-thumbnail img, .media-video, .media-still { transition: none; }
 }
+
+/* Premium editorial travel layer */
+:root {
+  --ink: #f5f7fb;
+  --muted: #9aa8bd;
+  --blue: #79a7ff;
+  --line: rgba(255,255,255,.13);
+  --glass: rgba(18,24,38,.68);
+  --shadow: 0 24px 70px rgba(0,0,0,.24);
+}
+body { color: var(--ink); background: #0b1220; }
+body::before {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(71,125,244,.17), transparent 28%),
+    radial-gradient(circle at 90% 36%, rgba(139,92,246,.13), transparent 25%),
+    linear-gradient(145deg, #0b1220, #111b2d 52%, #0b1220);
+}
+.glass {
+  border-color: rgba(255,255,255,.12);
+  background: rgba(18,24,38,.64);
+  box-shadow: 0 24px 70px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.13);
+}
+.site-header { background: rgba(10,17,30,.78); }
+.brand strong, .brand small, .desktop-nav, .desktop-nav a, .footer { color: #e7edf7; }
+.brand small, .desktop-nav, .footer { color: #91a0b6; }
+.brand-mark { background: linear-gradient(135deg, #8b5cf6, #38bdf8); }
+.button-dark { color: #fff; background: linear-gradient(135deg, #8b5cf6, #477df4); box-shadow: 0 12px 30px rgba(71,125,244,.26); }
+.button-blue { background: linear-gradient(135deg, #38bdf8, #477df4); }
+.hero { position: relative; min-height: 760px; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 30px -12% 0 38%;
+  z-index: -1;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #0b1220 0%, rgba(11,18,32,.58) 35%, rgba(11,18,32,.12)), url("media/photos/gulmarg-meadows-02.jpg") center / cover;
+  opacity: .46;
+  box-shadow: 0 30px 100px rgba(0,0,0,.3);
+}
+.hero h1 { max-width: 720px; color: #fff; font-size: clamp(56px, 8vw, 104px); }
+.hero h1 em, h1 em, h2 em { color: #a78bfa; }
+.hero-text { color: #b7c3d6; }
+.glass-chip { border-color: rgba(255,255,255,.15); background: rgba(18,24,38,.7); color: #b9c5d6; }
+.eyebrow { color: #91a0b6; }
+.text-link { color: #c4cfdf; }
+.trust-row { color: #9aa8bd; }
+.hero-art { border-color: rgba(255,255,255,.15); background: linear-gradient(145deg, rgba(33,46,74,.68), rgba(11,18,32,.42)); }
+.art-label span, .art-footer span, .section-heading > p, .package-top p, .route-list small, .feature-grid small, .advisory p, .inquiry-card > div > p { color: #a3b0c3; }
+.section-heading h2, .split-section h2, .inquiry-card h2 { color: #f7f9fc; }
+.package-card, .inquiry-card, .advisory { border-color: rgba(255,255,255,.13); background: rgba(18,24,38,.68); }
+.tier-switcher, .glass-inset, .route-list > div, form input, form select { border-color: rgba(255,255,255,.13); background: rgba(255,255,255,.06); }
+.tier-button { color: #9aa8bd; }
+.tier-button.is-active { color: #fff; background: linear-gradient(135deg, rgba(139,92,246,.7), rgba(71,125,244,.7)); }
+.feature-grid { border-color: rgba(255,255,255,.13); }
+.feature-icon { color: #a78bfa; background: rgba(139,92,246,.16); }
+.advisory-icon { color: #38bdf8; border-color: rgba(56,189,248,.55); }
+.destination-card { min-height: 390px; box-shadow: 0 24px 60px rgba(0,0,0,.22); }
+.destination-nainital { background: linear-gradient(150deg, rgba(30,75,92,.68), rgba(18,24,38,.72)), url("media/photos/pahalgam-valley.jpg") center / cover; }
+.destination-manali { background: linear-gradient(150deg, rgba(81,52,119,.64), rgba(18,24,38,.72)), url("media/photos/gulmarg-meadows-01.jpg") center / cover; }
+.destination-card h3 { font-size: 46px; }
+form label { color: #a3b0c3; }
+form input, form select { color: #f5f7fb; }
+form input::placeholder { color: #74839a; }
+.footer strong { color: #f5f7fb; }
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, .65fr) 1.4fr;
+  gap: 1px;
+  overflow: hidden;
+  margin-top: -15px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 20px;
+  background: rgba(255,255,255,.09);
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+}
+.proof-strip > div { min-height: 90px; display: flex; flex-direction: column; justify-content: center; padding: 18px 22px; background: rgba(18,24,38,.7); }
+.proof-strip strong { color: #a78bfa; font-family: "Playfair Display", serif; font-size: 28px; line-height: 1; }
+.proof-strip span { margin-top: 6px; color: #9aa8bd; font-size: 11px; }
+.proof-quote { border-left: 1px solid rgba(255,255,255,.1); }
+.proof-quote span { margin: 0; color: #e7edf7; font-family: "Playfair Display", serif; font-size: 16px; }
+.proof-quote small { margin-top: 5px; color: #7f8ea5; font-size: 10px; }
+.floating-whatsapp { position: fixed; right: 22px; bottom: 22px; z-index: 20; display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; color: #fff; background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 15px 35px rgba(16,185,129,.25); font-size: 12px; font-weight: 700; transition: transform .2s, box-shadow .2s; }
+.floating-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(16,185,129,.35); }
+@media (max-width: 800px) {
+  .hero::before { inset: 15px -30% 20px 10%; opacity: .25; }
+  .proof-strip { grid-template-columns: 1fr 1fr; margin-top: 0; }
+  .proof-quote { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.1); border-left: 0; }
+  .floating-whatsapp { right: 12px; bottom: 12px; }
+  .floating-whatsapp span { display: none; }
+}
 @media (max-width: 800px) {
   .desktop-nav { display: none; }
   .hero, .split-section, .inquiry-card { grid-template-columns: 1fr; gap: 35px; }
